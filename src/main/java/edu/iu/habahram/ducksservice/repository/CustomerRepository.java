@@ -38,6 +38,7 @@ public class CustomerRepository {
                 StandardOpenOption.CREATE,
                 StandardOpenOption.APPEND);
     }
+
     public void save(Customer customer) throws Exception {
         Customer c = findByUsername(customer.username());
         if(c != null) {
